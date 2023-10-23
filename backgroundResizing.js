@@ -24,7 +24,7 @@ function imageResize() {
 		image.style.width = "auto";
 		image.style.height = "100%";
     }
-    else {
+    else if (viewportMaxSize[0] === "height") {
 		image.style.width = "auto";
 		image.style.height = "100%";
 	}
