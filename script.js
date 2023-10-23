@@ -1,5 +1,5 @@
-require('dotenv').config({path: '.env'});
-const apiKey = process.env.API_KEY;
+// Trouver comment accéder à l' apiKey de manière sécurisée
+//const apiKey = process.env.API_KEY;
 
 async function getWeatherByCity(city, callback, elementId) {
     try {
