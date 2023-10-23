@@ -1,4 +1,4 @@
-require('dotenv').config({path: 'env.local'});
+require('dotenv').config({path: '.env'});
 const apiKey = process.env.API_KEY;
 
 async function getWeatherByCity(city, callback, elementId) {
