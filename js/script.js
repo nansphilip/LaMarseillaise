@@ -19,7 +19,7 @@ function showWeather(data, elementId, weatherElement, symbol) {
         value = value[key];
     }
     const tempElement = document.getElementById(elementId);
-    tempElement.innerHTML = String(Math.floor(value)) + symbol;
+    tempElement.innerHTML = "<strong>" + String(Math.floor(value)) + "</strong>" + symbol;
 }
 
 // Refresh data
