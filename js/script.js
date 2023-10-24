@@ -1,28 +1,15 @@
-import apiKey from "./apiKey.js";
+import imageResize from "./imageResize.js";
+import getWeatherByCity from "./getWeatherByCity.js";
 
-// Get weather data from API
-async function getWeatherByCity(city, callback, elementId, weatherElement, symbol) {
-    try {
-        const api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-        const data = await api.json();
-        return callback(data, elementId, weatherElement, symbol);
-    } catch (error) {
-        console.log('Error');
-    }
-}
+// Initial sizing
+imageResize();
 
-// Inner weather data by id
-function showWeather(data, elementId, weatherElement, symbol) {
-    const keys = weatherElement.split('.');
-    let value = data;
-    for (const key of keys) {
-        value = value[key];
-    }
-    const tempElement = document.getElementById(elementId);
-    tempElement.innerHTML = "<strong>" + String(Math.floor(value)) + "</strong>" + symbol;
-}
+// Auto resizing
+window.addEventListener("resize", () => {
+    imageResize();
+});
 
 // Refresh data
-getWeatherByCity('Marseille', showWeather, 'temp', 'main.temp', ' °C');
-getWeatherByCity('Marseille', showWeather, 'humidity', 'main.humidity', ' %');
-getWeatherByCity('Marseille', showWeather, 'pressure', 'main.pressure', ' hPa');
+getWeatherByCity('Marseille', 'temp', 'main.temp', ' °C');
+getWeatherByCity('Marseille', 'humidity', 'main.humidity', ' %');
+getWeatherByCity('Marseille', 'pressure', 'main.pressure', ' hPa');

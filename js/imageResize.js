@@ -13,7 +13,7 @@ function whichIsBigger() {
 	return whichIsBigger;
 }
 
-function imageResize() {
+export default function imageResize() {
 	const viewportMaxSize = whichIsBigger();
 
 	if (viewportMaxSize[0] === "width" && viewportMaxSize[2] > imageRatio) {
@@ -29,11 +29,3 @@ function imageResize() {
 		image.style.height = "100%";
 	}
 }
-
-// Initial sizing
-imageResize();
-
-// Auto resizing
-window.addEventListener("resize", () => {
-    imageResize();
-});
