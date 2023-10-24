@@ -21,6 +21,23 @@ html, body {
 }
 
 
+/* ---------- ANIMATION ---------- */
+main {
+    animation: infinite ease-in-out 6s moving;
+}
+
+@keyframes moving {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* ---------- FLEXBOX ---------- */
 .flex {
     display: flex;
