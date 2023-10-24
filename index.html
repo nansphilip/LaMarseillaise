@@ -12,27 +12,31 @@
 
 		<div class="flex col position">
 			<h1>Marseille</h1>
-			<div class="flex row">
-				<div class="flex row margin">
-                    <p id="meteo">--</p>
-                    <span><img id="soleil" src="assets/Soleil.png" alt=""></span>
-                </div>
-				<div class="flex row margin">
-					<p id="temp">--</p>
-					<span>°C</span>
-				</div>
-				<div class="flex row margin">
-					<p id="humidity">--</p>
-					<span>%</span>
-				</div>
-				<div class="flex row margin">
-					<p id="wind">--</p>
-					<span>m/s</span>
-				</div>
-				<div class="flex row margin">
-					<p id="pressure">--</p>
-					<span>hPa</span>
-				</div>
+			<div class="flex row warp">
+                <section class="flex row">
+                    <div class="flex row margin_side">
+                        <p id="meteo">--</p>
+                        <span><img id="soleil" src="assets/Soleil.png" alt=""></span>
+                    </div>
+                    <div class="flex row margin_side">
+                        <p id="temp">--</p>
+                        <span>°C</span>
+                    </div>
+                    <div class="flex row margin_side">
+                        <p id="humidity">--</p>
+                        <span>%</span>
+                    </div>
+                </section>
+                <section class="flex row">
+                    <div class="flex row margin_side">
+                        <p id="wind">--</p>
+                        <span>m/s</span>
+                    </div>
+                    <div class="flex row margin_side">
+                        <p id="pressure">--</p>
+                        <span>hPa</span>
+                    </div>
+                </section>
 			</div>
 			<p id="name">--- --- ---</p>
 		</div>

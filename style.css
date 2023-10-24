@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     
-    overflow: hidden;
+    overflow: auto;
     box-sizing: border-box;
     
     font-family: 'Roboto', sans-serif;
@@ -14,11 +14,13 @@ html, body {
     color: #ffffff;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     html, body {
         font-size: 12px;
     }
 }
+
+
 
 
 /* ---------- FLEXBOX ---------- */
@@ -38,7 +40,12 @@ html, body {
     align-items: center;
 }
 
+.warp {
+    flex-wrap: wrap;
+}
+
 .position {
+    position: fixed;
     height: 50%;
     width: 100%;
 }
@@ -71,8 +78,8 @@ span {
     padding: 0;
 }
 
-.margin {
-    margin: 1rem 1rem 0.5rem;
+.margin_side {
+    margin: 0 1rem;
 }
 
 
@@ -82,8 +89,8 @@ span {
     z-index: -1;
 }
 #front {
-    position: fixed;
-    z-index: 0;
+    position: absolute;
+    z-index: 1;
 }
 
 #soleil {
@@ -106,4 +113,10 @@ span {
 
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 650px) {
+    #name {
+        font-size: 1.2em;
+    }
 }
