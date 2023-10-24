@@ -1,5 +1,6 @@
 import apiKey from "./apiKey.js";
 
+// Get weather data from API
 async function getWeatherByCity(city, callback, elementId, weatherElement, symbol) {
     try {
         const api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
@@ -10,6 +11,7 @@ async function getWeatherByCity(city, callback, elementId, weatherElement, symbo
     }
 }
 
+// Inner weather data by id
 function showWeather(data, elementId, weatherElement, symbol) {
     const keys = weatherElement.split('.');
     let value = data;
@@ -20,6 +22,7 @@ function showWeather(data, elementId, weatherElement, symbol) {
     tempElement.innerHTML = String(value) + symbol;
 }
 
+// Refresh data
 getWeatherByCity('Marseille', showWeather, 'temp', 'main.temp', ' °C');
 getWeatherByCity('Marseille', showWeather, 'humidity', 'main.humidity', ' %');
 getWeatherByCity('Marseille', showWeather, 'pressure', 'main.pressure', ' hPa');
