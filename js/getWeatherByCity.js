@@ -5,6 +5,7 @@ export default async function getWeatherByCity(city, elementId, weatherElement, 
     try {
         const api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
         const data = await api.json();
+        console.log(data);
         return showWeather(data, elementId, weatherElement, symbol);
     } catch (error) {
         console.log('Error');
@@ -18,6 +19,13 @@ function showWeather(data, elementId, weatherElement, symbol) {
     for (const key of keys) {
         value = value[key];
     }
+
+    if (typeof value === 'number') {
+        value = String(Math.floor(value));
+    } else {
+        value = String(value);
+    }
+
     const tempElement = document.getElementById(elementId);
-    tempElement.innerHTML = "<strong>" + String(Math.floor(value)) + "</strong>" + symbol;
+    tempElement.innerHTML = value;
 }

@@ -20,18 +20,6 @@ html, body {
     }
 }
 
-#background {
-    position: absolute;
-    z-index: -1;
-}
-
-
-/* ---------- FLEXBOX ---------- */
-.position {
-    height: 50%;
-    width: 100%;
-}
-
 
 /* ---------- FLEXBOX ---------- */
 .flex {
@@ -50,6 +38,11 @@ html, body {
     align-items: center;
 }
 
+.position {
+    height: 50%;
+    width: 100%;
+}
+
 
 /* ---------- STYLES ---------- */
 h1 {
@@ -63,9 +56,54 @@ h1 {
 }
 
 p {
+    font-weight: 700;
+    font-size: 2em;
+
+    margin: 0;
+    padding: 0;
+}
+
+span {
     font-weight: 400;
     font-size: 2em;
 
-    margin: 0 1rem;
+    margin: 0 0 0 0.2rem;
+    padding: 0;
+}
+
+.margin {
+    margin: 1rem 1rem 0.5rem;
+}
+
+
+/* ---------- IDs ---------- */
+#back {
+    position: absolute;
+    z-index: -1;
+}
+#front {
+    position: fixed;
+    z-index: 0;
+}
+
+#soleil {
+    height: 2.1rem;
+    width: auto;
+
+    position: relative;
+    top: 0.22rem;
+
+    margin: 0;
+    padding: 0;
+}
+#meteo {
+    margin-right: 0.3rem;
+}
+
+#name {
+    font-weight: 400;
+    font-size: 1.5em;
+
+    margin: 0;
     padding: 0;
 }

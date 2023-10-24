@@ -2,14 +2,19 @@ import imageResize from "./imageResize.js";
 import getWeatherByCity from "./getWeatherByCity.js";
 
 // Initial sizing
-imageResize();
+imageResize("back");
+imageResize("front");
 
 // Auto resizing
 window.addEventListener("resize", () => {
-    imageResize();
+	imageResize("back");
+	imageResize("front");
 });
 
 // Refresh data
-getWeatherByCity('Marseille', 'temp', 'main.temp', ' °C');
-getWeatherByCity('Marseille', 'humidity', 'main.humidity', ' %');
-getWeatherByCity('Marseille', 'pressure', 'main.pressure', ' hPa');
+getWeatherByCity("Marseille", "temp", "main.temp");
+getWeatherByCity("Marseille", "humidity", "main.humidity");
+getWeatherByCity("Marseille", "pressure", "main.pressure");
+getWeatherByCity("Marseille", "wind", "wind.speed");
+getWeatherByCity("Marseille", "meteo", "weather.0.main");
+getWeatherByCity("Marseille", "name", "name");

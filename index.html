@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Marseille</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <img id="background" src="assets/Clanques.jpg" alt="">
-    
-    <div class="flex col position">
-        <h1>Marseille</h1>
-        <div class="flex row">
-            <p id="temp">-- °C</p>
-            <p id="humidity">-- %</p>
-            <p id="pressure">-- hPa</p>
-        </div>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>La Marseille</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<img id="back" src="assets/ClanquesBack.jpg" alt="" />
+		<img id="front" src="assets/ClanquesFront.png" alt="" />
 
-    <script type="module" src="js/script.js"></script>
-</body>
+		<div class="flex col position">
+			<h1>Marseille</h1>
+			<div class="flex row">
+				<div class="flex row margin">
+                    <p id="meteo">--</p>
+                    <span><img id="soleil" src="assets/Soleil.png" alt=""></span>
+                </div>
+				<div class="flex row margin">
+					<p id="temp">--</p>
+					<span>°C</span>
+				</div>
+				<div class="flex row margin">
+					<p id="humidity">--</p>
+					<span>%</span>
+				</div>
+				<div class="flex row margin">
+					<p id="wind">--</p>
+					<span>m/s</span>
+				</div>
+				<div class="flex row margin">
+					<p id="pressure">--</p>
+					<span>hPa</span>
+				</div>
+			</div>
+			<p id="name">--- --- ---</p>
+		</div>
+
+		<script type="module" src="js/script.js"></script>
+	</body>
 </html>
