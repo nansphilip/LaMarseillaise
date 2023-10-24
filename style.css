@@ -8,10 +8,16 @@ html, body {
     
     overflow: hidden;
     box-sizing: border-box;
-
+    
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+    html, body {
+        font-size: 12px;
+    }
 }
 
 #background {
