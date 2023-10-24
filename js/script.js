@@ -4,7 +4,6 @@ async function getWeatherByCity(city, callback, elementId, weatherElement, symbo
     try {
         const api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
         const data = await api.json();
-        console.log(data);
         return callback(data, elementId, weatherElement, symbol);
     } catch (error) {
         console.log('Error');
