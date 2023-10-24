@@ -9,12 +9,16 @@
 <body>
     <img id="background" src="assets/Clanques.jpg" alt="">
     
-    <div class="flex">
+    <div class="flex col position">
         <h1>Marseille</h1>
-        <p id="temp">21.5 °C</p>
+        <div class="flex row">
+            <p id="temp">18.51 °C</p>
+            <p id="humidity">63 %</p>
+            <p id="pressure">1002 hPa</p>
+        </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="backgroundResizing.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script src="js/backgroundResizing.js"></script>
 </body>
 </html>
