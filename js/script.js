@@ -17,4 +17,3 @@ getWeatherByCity("Marseille", "humidity", "main.humidity");
 getWeatherByCity("Marseille", "pressure", "main.pressure");
 getWeatherByCity("Marseille", "wind", "wind.speed");
 getWeatherByCity("Marseille", "meteo", "weather.0.main");
-getWeatherByCity("Marseille", "name", "name");
