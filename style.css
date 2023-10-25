@@ -77,6 +77,16 @@ h1 {
     padding: 0;
 }
 
+h2 {
+    font-weight: 300;
+    font-size: 2em;
+
+    letter-spacing: 0.5rem;
+
+    margin: 2rem 0 0 0;
+    padding: 0;
+}
+
 p {
     font-weight: 700;
     font-size: 2em;
@@ -122,4 +132,16 @@ span {
 
 #meteo {
     margin-right: 0.3rem;
+}
+
+#scroll {
+    height: 2.1rem;
+    width: auto;
+
+    position: relative;
+    top: 1rem;
+    left: 0.5rem;
+
+    margin: 0;
+    padding: 0;
 }
