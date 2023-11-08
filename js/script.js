@@ -7,8 +7,8 @@ imageResize("front");
 
 // Auto resizing
 window.addEventListener("resize", () => {
-	imageResize("back");
-	imageResize("front");
+    imageResize("back");
+    imageResize("front");
 });
 
 // Refresh data
